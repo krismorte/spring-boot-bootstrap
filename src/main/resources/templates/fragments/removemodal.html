@@ -1,0 +1,28 @@
+			<div class="modal modal-primary fade" id='modelRemove'>
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h4 class="modal-title" th:text="#{modal.confirm.delete.title}"></h4>
+						</div>
+						<div class="modal-body">
+							<p th:text="#{modal.confirm.delete.message}"></p>
+							<input type="hidden" id="modelId" />
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default btn-sm pull-left"
+								data-dismiss="modal" th:text="#{common.cancel}"></button>
+
+							<a id="btnConfirmRemove" type="button"
+								class="btn btn-danger btn-sm pull-right"
+								th:text="#{common.confirm}"></a>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
