@@ -7,6 +7,8 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 
+import com.krismorte.service.SmtpEmailService;
+
 @Configuration
 public class AppConfig extends WebMvcConfigurerAdapter {
  
@@ -29,4 +31,5 @@ public class AppConfig extends WebMvcConfigurerAdapter {
    public void addInterceptors(InterceptorRegistry registry) {
        registry.addInterceptor(localeChangeInterceptor());
    }
+   
 }	
