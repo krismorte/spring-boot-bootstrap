@@ -100,10 +100,10 @@
 			<div class="navbar-custom-menu">
 				<ul class="nav navbar-nav">
 
-					<li sec:authorize="!isAuthenticated()"><a href="/login"><i class="fa fa-sign-in"></i></a></li>
+					<li sec:authorize="!isAuthenticated()"><a th:href="@{/login}"><i class="fa fa-sign-in"></i></a></li>
 					<!--  <sec:authorize access="hasRole('USER')">-->
 					<li sec:authorize="isAuthenticated()">					
-					<a href="/logout"><span sec:authentication="name"></span>  <i class="fa fa-sign-out"></i></a>
+					<a  th:href="@{/logout}"><span sec:authentication="name"></span>  <i class="fa fa-sign-out"></i></a>
 						</li>
 					<!-- </sec:authorize>-->
 

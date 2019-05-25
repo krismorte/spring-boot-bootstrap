@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.krismorte.dao.UserDao;
 import com.krismorte.model.User;
 import com.krismorte.secutiry.OnRegistrationCompleteEvent;
 import com.krismorte.secutiry.UserDto;
@@ -36,9 +37,16 @@ public class PublicControll {
 	private UserService userService;
 	@Autowired
     private MessageSource messages;
+	@Autowired
+	private UserDao userDao;	
 	
 	@GetMapping("/")
 	public ModelAndView get() {
+		for(User u:userDao.findAll()) {
+			System.out.println("U: "+u.getName());
+		}
+		
+		
 		ModelAndView mv = new ModelAndView("index");
 		return mv;
 	}
